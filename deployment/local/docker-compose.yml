@@ -1,0 +1,12 @@
+version: '2'
+services:
+  epgcore-backend:
+    build:
+      context: ./../../
+    env_file:
+      - ./.env
+    ports:
+      - 8080:8080/tcp
+    volumes:
+    - /data/epg:/data/epg
+    network_mode: host

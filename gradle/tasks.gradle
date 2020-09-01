@@ -1,0 +1,32 @@
+// TV2 Gradle Tasks
+def envFilesToCopy = copySpec {
+    from '../deployment/'
+    include '*.env'
+}
+
+
+// copy env files into builddir
+task(copyEnvFiles, type: Copy) {
+    with envFilesToCopy
+    into "${buildDir}"
+}
+
+
+task copyToLib(type: Copy) {
+    into dependenciesDir
+    from configurations.runtime
+}
+task copyToTestLib(type: Copy) {
+    into dependenciesDir
+    from configurations.testRuntime
+}
+
+task wrapper(type: Wrapper) {
+      gradleVersion = '4.5.1'
+}
+
+
+
+// The following lines are used for updating; if removed you will be responsible for merging/updating file.
+// Template=TV2default
+// TemplateVersion=1.0.0

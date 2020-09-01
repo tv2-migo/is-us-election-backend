@@ -1,0 +1,7 @@
+jar {
+    exclude('**/.env')
+}
+
+// The following lines are used for updating; if removed you will be repsonsible for merging/updating file.
+// Template=TV2default
+// TemplateVersion=1.0.0

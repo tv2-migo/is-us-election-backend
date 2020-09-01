@@ -1,0 +1,34 @@
+// Read environment variables, including variables passed by Jenking CI
+def env = System.getenv()
+// Add build servers build number to version number or if on developer machine add -SNAPSHOT to use floating version
+def jenkinsBuildNumber = System.getenv("BUILD_NUMBER") ?: '0-SNAPSHOT'
+def variant = System.getenv("BRANCH_NAME") ?: 'local'
+
+version = new Version(version_major: major as int, minor: minor as int, buildnumber: jenkinsBuildNumber as String, variant: variant)
+
+class Version {
+    int version_major
+    int minor
+    String buildnumber
+    String variant
+
+    String toString() {
+        if (variant == 'master') {
+            return "$version_major.$minor.$buildnumber"
+        }
+        return "$version_major.$minor.$buildnumber-$variant"
+    }
+}
+
+// properties file with information that can be later accessed by java application.
+ant.mkdir(dir: "src/main/resources/")
+ant.propertyfile(file: "src/main/resources/version.properties", comment: 'Version Properties') {
+    ant.entry(key: 'version', value: version)
+    ant.entry(key: 'projectName', value: projectName)
+}
+
+ant.mkdir(dir: "src/test/resources")
+ant.propertyfile(file: "src/test/resources/version.properties", comment: 'Version Properties') {
+    ant.entry(key: 'version', value: version)
+    ant.entry(key: 'projectName', value: projectName)
+}

@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id "com.bmuschko.docker-remote-api" version "4.2.0"
+    id 'jacoco'
+    id 'com.avast.gradle.docker-compose' version "0.9.1"
+    id 'idea'
+    id 'war'
+    id 'maven-publish'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main']
+        }
+        resources {
+            srcDirs = ['deployment']
+        }
+    }
+}
+
+ext.dependenciesDir = 'lib'
+
+// Apply modules/tasks
+apply from: file('gradle/repositories.gradle')
+apply from: file('gradle/dependencies.gradle')
+apply from: file('gradle/version.gradle')
+apply from: file('gradle/war.gradle')
+apply from: file('gradle/tasks.gradle')
+
+targetCompatibility = 8
+sourceCompatibility = 8
+
+build.dependsOn copyToLib
+build.dependsOn copyToTestLib

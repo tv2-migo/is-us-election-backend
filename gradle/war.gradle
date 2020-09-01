@@ -1,0 +1,16 @@
+// include version information into generated war file
+war {
+    archiveName="$archivesBaseName.$extension"
+    manifest {
+        attributes 'Specification-Title': '$projectName ' ,'Implementation-Title': '$jenkinsBuildTag', 'Implementation-Version': "${project.version}"
+    }
+    from 'web' // adds a file-set to the root of the archive
+    // from 'src/rootContent' // adds a file-set to the root of the archive
+    // webInf { from 'src/additionalWebInf' } // adds a file-set to the WEB-INF dir.
+    // classpath configurations.moreLibs // adds a configuration to the WEB-INF/lib dir.
+    // webXml = file('src/someWeb.xml') // copies a file to WEB-INF/web.xml
+}
+
+// The following lines are used for updating; if removed you will be repsonsible for merging/updating file.
+// Template=TV2default
+// TemplateVersion=1.0.0

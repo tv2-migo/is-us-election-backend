@@ -1,0 +1,14 @@
+version: '2'
+services:
+  us-election-backend:
+    image: ${DOCKER_IMAGE}
+    env_file:
+      - ./.env
+    ports:
+      - 8080/tcp
+    labels:
+      traefik.frontend.rule: Headers:X-Host, ${PRODUCT}
+      traefik.port: '8080'
+      traefik.enable: 'true'
+      io.rancher.container.pull_image: always
+            

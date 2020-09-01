@@ -1,0 +1,23 @@
+dependencies {
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet', version: '2.14'
+    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.14'
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+    compile group: 'javax.servlet.jsp', name: 'jsp-api', version: '2.2'
+    compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.0'
+
+    compile group: 'com.microsoft.azure', name: 'adal4j', version: '1.1.1'
+    compile group: 'com.nimbusds', name: 'oauth2-oidc-sdk', version: '4.5'
+    compile group: 'org.json', name: 'json', version: '20090211'
+
+    compile group: 'org.postgresql', name: 'postgresql', version: '9.3-1102-jdbc41'
+    compile group: 'commons-net', name: 'commons-net', version: '3.3'
+
+    compile group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '7.0.0.jre8'
+
+    testCompile(group: 'junit', name: 'junit', version: '4.12') {
+        exclude group: 'org.hamcrest', module: 'hamcrest-core'
+    }
+    testCompile group: 'org.hamcrest', name: 'hamcrest-library', version: '1.3'
+    testCompile group: 'org.skyscreamer', name: 'jsonassert', version: '1.4.0'
+    testCompile group: 'com.h2database', name: 'h2', version: '1.4.193'
+}

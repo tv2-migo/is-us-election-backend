@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcat-users xmlns="http://tomcat.apache.org/xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd">
+    <role rolename="manager"/>
+    <role rolename="manager-gui"/>
+    <role rolename="admin"/>
+    <role rolename="admin-gui"/>
+    <user password="tv2tv2" roles="manager-gui,manager,admin, admin-gui" username="tomcat" />
+</tomcat-users>

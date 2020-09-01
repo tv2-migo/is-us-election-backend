@@ -1,0 +1,366 @@
+body {
+    font-size: 0.85rem;   
+    font-family: 'Trebuchet MS', Arial, Tahoma, Verdana;
+}
+
+h3 {
+    font-size: 2.1em;
+    color: #4e4e4e;    
+}
+
+h4 {
+    font-size: 2.1em;
+    color: #4e4e4e;
+    margin: 0.5rem;
+    padding: 0;
+    line-height: 16px;
+    
+}
+
+h6 {
+    font-size: 1.1em;
+    color: #a9a9a9;
+    line-height: 16px;
+    padding:0;
+    margin: 0.5rem;
+}
+
+.title-bar {
+    background: #2199e8;
+    padding: 0.9rem;
+}
+
+.top-bar {
+    background: #2199e8;
+    box-shadow: 0px 5px 10px rgba(174,175,175,1);
+    margin-bottom: 25px;
+}
+.top-bar ul {
+    background: #2199e8;
+}
+.top-bar ul li {
+    background: #2199e8;
+}
+.top-bar ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 2px #a9a9a9;
+    font-size: 0.85rem;
+}
+
+.menu > li > a:hover {
+    text-decoration: underline;
+}
+
+.menu-text {
+    height: 70px;
+    margin-top: 10px;
+    color: #fff;
+    background: url("../img/tv2_n_RGB.svg") #2199e8 left center no-repeat !important;
+    background-size: 118px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 65px;
+    font-size: 25px;
+    text-transform: lowercase;
+    text-shadow: 0px 0px 2px #a3a3a3;
+    font-weight: inherit;
+}
+
+@media only screen and (max-width: 40em) {
+    .menu-text {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 40em) {
+    .top-bar .menu:last-child {
+        border-left: 1px solid #4e4e4e;
+    }
+
+    .top-bar .menu:first-child {
+        border-left: none;
+    }
+
+    .top-bar .menu li:not(:last-child) {
+        border-right: 1px solid rgba(174,175,175,1);
+    }
+
+    .top-bar .top-bar-left {
+        height: 76px;
+    }
+
+    .top-bar .top-bar-right {
+        padding-top: 38px;
+    }
+
+}
+.dropdown.menu .submenu {
+    border: none;
+}
+
+.dropdown.menu li a {
+
+}
+
+.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after {
+    border-color: #fff transparent transparent;
+}
+
+.is-drilldown-submenu-parent > a::after {
+    border-color: transparent transparent transparent #fff;
+}
+
+.js-drilldown-back::before {
+    border-color: transparent #fff transparent transparent;
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 5px;
+    border-color: #fff transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    right: 5px;
+    margin-top: -2px;
+}
+
+.icon-success {
+    color: #22bb5b;
+}
+
+.icon-failed {
+    color: #da3116;
+}
+
+.election-table {
+    border: solid 1px #DDDDDD;
+}
+
+.election-table li {
+    border-bottom: dotted 1px #DDDDDD;
+    font-size: 0.75rem;
+    padding: 0.875rem 1.125rem;
+
+}
+.election-table li:last-child {
+    border-bottom: 0;
+
+}
+.election-table .type {
+    background-color: #333333;
+    color: #EEEEEE;
+    font-size: 0.875rem;
+    border-bottom: 0;
+}
+
+.election-table .name {
+    background-color: #F6F6F6;
+    color: #333333;
+    font-size: 1.20rem;
+    border-bottom: 0;
+}
+
+.election-table .description {
+    color: #777777;
+    font-size: 0.625rem;
+}
+
+.election-table .button {
+    margin: 0;
+}
+
+.election-table .head-blok {
+    font-weight: bold;
+    display: inline-block;
+    width: 65px;
+}
+li .head-blok:before {
+    content: "\00BB  ";
+    font-weight: bold;
+    font-size: 1rem;
+    color: #da3116;
+}
+
+li .head-blok{
+    font-weight: normal;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #777777;
+    display: inline-block;
+    width: 95px;   
+}
+
+.accordion-head-elm {
+    display: inline-block;
+    width: 50%;
+}
+
+.remark, blockquote {
+    font-size: 0.9rem;
+}
+
+.black {
+    color: #000;
+}
+
+.profile-image {
+    margin-right: 10px;
+}
+
+.parti-image {    
+    margin-right: 10px;
+    position: relative; 
+}
+
+.parti-image h2 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 56px;
+    left: 0px;
+    right: 0;
+    color: #FFF;
+    width: 150px;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.tabs-content {
+    min-height: 800px;
+}
+
+.td-head {
+    font-size: 0.8rem;
+    color: #777777;
+    font-weight: normal;
+    vertical-align: top;
+    width: 175px;
+}
+
+.parti-letter {
+    color: #777777;
+    font-size: 0.9em;
+    padding: 2px;
+}
+
+.parti-short {
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+.parti-blok {
+    background-color:lightgrey; 
+    color: #fff; 
+    font-size: 0.8rem; 
+    text-align: center; 
+    text-transform: capitalize; 
+    height: 23px; 
+    width: 80px; 
+    display: inline-block;
+}
+
+span.required {
+    color: #da3116;
+}
+
+input.valid, select.valid {
+    border-color: #22bb5b;
+}
+
+input.invalid, select.invalid {
+    border-color: #da3116;
+}
+
+ul.ui-autocomplete {
+    list-style: none;  
+    max-height: 130px;
+    width:  300px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+.xui-helper-hidden-accessible {
+    display: none;
+}
+
+.rankingList {
+    list-style: none;
+    margin-left: 0px;
+}
+
+.rankingList > li {
+    display: inline-block;
+    float: left;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    text-align: left;
+}
+.rankingList > li:nth-child(3n+3) {
+    padding-right: 0px;
+}
+
+ul#active-elections, ul#inactive-elections {
+    list-style : none;
+}
+
+#candidatesElements {
+    line-height: 14.4px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+    display: inline-block;
+    color: #4e4e4e;
+}
+
+.ranking-drag {
+    border: 1px dotted #d6d6d6;    
+}
+
+.rankingList .election-table ul {
+    min-width: 390px;
+    min-height: 320px;
+    max-height: 600px;
+    overflow-y: auto;
+    display: inline-block;
+}
+.candidatesList_empty > li{cursor: move;}
+
+.import-config-overview {
+    font-weight: bold;
+    font-size: 15px;
+    list-style : none;
+    padding: 5px;
+
+}
+
+.import-config-overview-item {
+    list-style : none;
+    text-transform: lowercase;
+    line-height: 20px;
+}
+.import-config-overview-item i {
+    color: indianred;
+}
+.import-config-overview-item  .fi-folder{
+    color: #cc6600;
+}
+.import-config-overview-item .fi-link {
+    color: #3399ff;
+}
+.import-config-overview-item i {
+    color: indianred;
+}
+
+.import-config-overview-item a{
+    color: #4e4e4e;
+}
+.import-config-overview-item a:hover{
+    text-decoration: underline;
+}
